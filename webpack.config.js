@@ -2,7 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './src/toPDF/bound.js', // 指定入口文件
+  entry: './src/bound.js', // 指定入口文件
   
   output: {
     filename: 'bundle.js',
@@ -44,7 +44,7 @@ module.exports = {
   
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/toPDF/index.html',
+      template: './src/index.html',
       filename: 'index.html',
     }),
   ],

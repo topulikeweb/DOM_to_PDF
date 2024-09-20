@@ -1,26 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOM to PDF</title>
+    <title>丰富的 HTML 示例</title>
     <style>
-    #content {
-        width: 1000px; /* 设置宽度以适应A4纸张 */
-        padding: 20px;
-        height: 2000px;
-        background: #f5f5f5;
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+    }
+
+    header {
+        background-color: #4CAF50;
+        padding: 10px;
+        color: white;
+        text-align: center;
+    }
+
+    section {
+        margin: 20px 0;
+    }
+
+    .image-container {
+        text-align: center;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+    }
+
+    table, th, td {
         border: 1px solid #ddd;
-        margin: 20px auto;
+    }
+
+    th, td {
+        padding: 8px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+
+    .form-section input, .form-section textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        box-sizing: border-box;
+    }
+
+    .list-section ul {
+        list-style-type: disc;
+        margin-left: 20px;
     }
     </style>
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <mata http-equiv="X-UA-Compatible" content="ie=edge"><title>Document</title>
 </head>
 <body>
 <div id="content">
-    <h1>Hello World</h1>
-    <p>This content will be converted to PDF.</p>
+    <header>
+        <h1>丰富的 HTML 示例</h1>
+        <p>包含文本、图像、表格、列表和表单元素的示例页面</p>
+    </header>
+
+    <section class="text-section">
+        <h2>段落文本</h2>
+        <p>
+            这是一段示例文本，用于展示多样化的文字内容。可以包含<strong>粗体</strong>、<em>斜体</em>、以及<a
+                href="#">链接</a>等格式。</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+            vestibulum volutpat nibh, eget commodo felis ullamcorper vel.
+            Vivamus imperdiet bibendum lacus, nec varius magna.</p>
+    </section>
+
+    <section class="image-container">
+        <h2>图像示例</h2>
+        <img src="https://via.placeholder.com/800x400" alt="示例图片">
+    </section>
+
+    <section class="table-section">
+        <h2>表格示例</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>名称</th>
+                <th>年龄</th>
+                <th>职业</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>张三</td>
+                <td>28</td>
+                <td>工程师</td>
+            </tr>
+            <tr>
+                <td>李四</td>
+                <td>34</td>
+                <td>设计师</td>
+            </tr>
+            <tr>
+                <td>王五</td>
+                <td>22</td>
+                <td>学生</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="list-section">
+        <h2>无序列表</h2>
+        <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+            <li>React</li>
+        </ul>
+
+        <h2>有序列表</h2>
+        <ol>
+            <li>第一项</li>
+            <li>第二项</li>
+            <li>第三项</li>
+        </ol>
+    </section>
+
+    <section class="form-section">
+        <h2>表单示例</h2>
+        <form>
+            <label for="name">姓名:</label>
+            <input type="text" id="name" name="name" placeholder="输入你的姓名">
+
+            <label for="email">电子邮箱:</label>
+            <input type="email" id="email" name="email"
+                   placeholder="输入你的电子邮箱">
+
+            <label for="message">消息:</label>
+            <textarea id="message" name="message" rows="4"
+                      placeholder="输入你的消息"></textarea>
+
+            <button type="submit">提交</button>
+        </form>
+    </section>
+
+    <section class="footer">
+        <h2>页脚</h2>
+        <p>版权所有 &copy; 2024. 保留所有权利。</p>
+    </section>
 </div>
 <button id="download">Download as PDF</button>
 </body>
 </html>
+
+
+

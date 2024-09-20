@@ -2,8 +2,16 @@ import { jsPDF } from "jspdf";
 import html2canvas from "html2canvas";
 
 class PDFCreator {
+  pageSize
+  pdf
   
-  constructor (targetContent) {
+  constructor (targetContent, pageSize) {
+    this.pageSize = pageSize
+    this.pdf = new jsPDF({
+      orientation: "portrait",
+      unit: "mm",
+      format: this.pageSize,
+    })
     this.targetContent = targetContent
   }
   
@@ -16,37 +24,36 @@ class PDFCreator {
     return Number(num)
   }
   
-  /**
-   * 翻页
-   */
-  pageTurning () {
-  
-  }
-  
   exportPDF () {
     html2canvas(this.targetContent).then(canvas => {
-      const imageData = canvas.toDataURL('image/png');
-      const pdf = new jsPDF({
-        orientation: "portrait",
-        unit: "mm",
-        format: "a4",
-      })
-      
+      const imageData = canvas.toDataURL('image/png', 0.5);
       // 获取图片宽高比来适应PDF页面
-      const imgWidth = this.convertUnit(this.targetContent.offsetWidth); // A4 尺寸的宽度为 210mm
-      const pageHeight = 297; // A4 尺寸的高度为 297mm
-      const imgHeight = (canvas.height * imgWidth) / canvas.width;
-      
-      pdf.addImage(imageData, "PNG", 0, 0, imgWidth, imgHeight);
-      pdf.save("download.pdf");
+      const imgWidth = this.convertUnit(this.targetContent.offsetWidth);
+      const imgHeight = this.convertUnit((canvas.height * this.targetContent.offsetWidth) / canvas.width);
+      const pageHeight = this.pdf.internal.pageSize.getHeight()
+      let remainHeight = imgHeight
+      let position = 0
+      while (remainHeight > 0) {
+        const currentHeight = Math.min(imgHeight, remainHeight)
+        this.pdf.addImage(imageData, 'JPG', 0, -position, imgWidth, imgHeight)
+        remainHeight -= currentHeight
+        position += currentHeight
+        if (currentHeight > 0) {
+          this.pdf.addPage()
+        }
+      }
+      this.pdf.save("download.pdf");
     });
   }
 }
 
 const targetContent = document.getElementById('content')
+
+
 const downloadBtn = document.getElementById('download')
 downloadBtn.addEventListener('click', () => {
-  const pdfCreator = new PDFCreator(targetContent);
+  console.log(111)
+  const pdfCreator = new PDFCreator(targetContent, 'a4');
   pdfCreator.exportPDF();
 })
 
