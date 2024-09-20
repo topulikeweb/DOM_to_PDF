@@ -1,0 +1,11 @@
+# 忽略所有 .log 文件
+*.log
+
+# 忽略 node_modules 目录
+node_modules/
+
+# 忽略特定文件
+secret.txt
+
+# 忽略所有 .DS_Store 文件（macOS）
+.DS_Store
