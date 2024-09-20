@@ -47,14 +47,4 @@ class PDFCreator {
   }
 }
 
-const targetContent = document.getElementById('content')
-
-
-const downloadBtn = document.getElementById('download')
-downloadBtn.addEventListener('click', () => {
-  console.log(111)
-  const pdfCreator = new PDFCreator(targetContent, 'a4');
-  pdfCreator.exportPDF();
-})
-
 
