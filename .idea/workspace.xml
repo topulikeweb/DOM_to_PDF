@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="75c54815-4789-461e-b45d-d5540341ce11" name="Changes" comment="git配置">
+    <list default="true" id="75c54815-4789-461e-b45d-d5540341ce11" name="Changes" comment="完成项目">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bound.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/bound.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +48,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "DefaultHtmlFileTemplate": "HTML File",
+    "Node.js.bound.js.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "last_opened_file_path": "/Users/zhengchaoyang/code/project/DOM_to_PDF",
@@ -85,7 +83,7 @@
       <updated>1726815426811</updated>
       <workItem from="1726815427824" duration="878000" />
       <workItem from="1726816309942" duration="1936000" />
-      <workItem from="1726819012915" duration="6411000" />
+      <workItem from="1726819012915" duration="14705000" />
     </task>
     <task id="LOCAL-00001" summary="git配置">
       <option name="closed" value="true" />
@@ -95,7 +93,23 @@
       <option name="project" value="LOCAL" />
       <updated>1726818809956</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="完成pdf转换的时候翻页的操作">
+      <option name="closed" value="true" />
+      <created>1726831409299</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1726831409299</updated>
+    </task>
+    <task id="LOCAL-00003" summary="完成项目">
+      <option name="closed" value="true" />
+      <created>1726831943979</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1726831943979</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,6 +128,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="git配置" />
-    <option name="LAST_COMMIT_MESSAGE" value="git配置" />
+    <MESSAGE value="完成pdf转换的时候翻页的操作" />
+    <MESSAGE value="完成项目" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成项目" />
   </component>
 </project>
